@@ -1,4 +1,4 @@
-import { type StatsTableProps } from './stats-table-props';
+import { type StatsTableProps } from './stats-table.types';
 import DataTable from 'react-data-table-component';
 import { columns } from './columns';
 
