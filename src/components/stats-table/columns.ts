@@ -12,6 +12,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensivePPA.name,
     selector: (row: TeamAdvancedStats) => row.offensivePPA,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensivePPA - a.offensivePPA;
     },
@@ -20,6 +21,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveExplosiveness.name,
     selector: (row: TeamAdvancedStats) => row.offensiveExplosiveness,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensiveExplosiveness - a.offensiveExplosiveness;
     },
@@ -28,6 +30,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensivePowerSuccess.name,
     selector: (row: TeamAdvancedStats) => row.offensivePowerSuccess,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensivePowerSuccess - a.offensivePowerSuccess;
     },
@@ -36,6 +39,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveStuffRate.name,
     selector: (row: TeamAdvancedStats) => row.offensiveStuffRate,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.offensiveStuffRate - b.offensiveStuffRate;
     },
@@ -44,6 +48,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveLineYards.name,
     selector: (row: TeamAdvancedStats) => row.offensiveLineYards,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensiveLineYards - a.offensiveLineYards;
     },
@@ -52,6 +57,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveSecondLevelYards.name,
     selector: (row: TeamAdvancedStats) => row.offensiveSecondLevelYards,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensiveSecondLevelYards - a.offensiveSecondLevelYards;
     },
@@ -60,6 +66,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveOpenFieldYards.name,
     selector: (row: TeamAdvancedStats) => row.offensiveOpenFieldYards,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensiveOpenFieldYards - a.offensiveOpenFieldYards;
     },
@@ -68,6 +75,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensivePointsPerOpportunity.name,
     selector: (row: TeamAdvancedStats) => row.offensivePointsPerOpportunity,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensivePointsPerOpportunity - a.offensivePointsPerOpportunity;
     },
@@ -76,6 +84,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveHavoc.name,
     selector: (row: TeamAdvancedStats) => row.offensiveHavoc,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.offensiveHavoc - b.offensiveHavoc;
     },
@@ -84,6 +93,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveRushingPPA.name,
     selector: (row: TeamAdvancedStats) => row.offensiveRushingPPA,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensiveRushingPPA - a.offensiveRushingPPA;
     },
@@ -92,6 +102,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveRushingSuccessRate.name,
     selector: (row: TeamAdvancedStats) => row.offensiveRushingSuccessRate,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensiveRushingSuccessRate - a.offensiveRushingSuccessRate;
     },
@@ -100,6 +111,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensiveRushingExplosiveness.name,
     selector: (row: TeamAdvancedStats) => row.offensiveRushingExplosiveness,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensiveRushingExplosiveness - a.offensiveRushingExplosiveness;
     },
@@ -108,6 +120,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensivePassingPPA.name,
     selector: (row: TeamAdvancedStats) => row.offensivePassingPPA,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensivePassingPPA - a.offensivePassingPPA;
     },
@@ -116,6 +129,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensivePassingSuccessRate.name,
     selector: (row: TeamAdvancedStats) => row.offensivePassingSuccessRate,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensivePassingSuccessRate - a.offensivePassingSuccessRate;
     },
@@ -124,6 +138,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.offensivePassingExplosiveness.name,
     selector: (row: TeamAdvancedStats) => row.offensivePassingExplosiveness,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.offensivePassingExplosiveness - a.offensivePassingExplosiveness;
     },
@@ -132,6 +147,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensivePPA.name,
     selector: (row: TeamAdvancedStats) => row.defensivePPA,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensivePPA - b.defensivePPA;
     },
@@ -140,6 +156,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveSuccessRate.name,
     selector: (row: TeamAdvancedStats) => row.defensiveSuccessRate,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensiveSuccessRate - b.defensiveSuccessRate;
     },
@@ -148,6 +165,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveExplosiveness.name,
     selector: (row: TeamAdvancedStats) => row.defensiveExplosiveness,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensiveExplosiveness - b.defensiveExplosiveness;
     },
@@ -156,6 +174,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensivePowerSuccess.name,
     selector: (row: TeamAdvancedStats) => row.defensivePowerSuccess,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensivePowerSuccess - b.defensivePowerSuccess;
     },
@@ -164,6 +183,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveStuffRate.name,
     selector: (row: TeamAdvancedStats) => row.defensiveStuffRate,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.defensiveStuffRate - a.defensiveStuffRate;
     },
@@ -172,6 +192,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveLineYards.name,
     selector: (row: TeamAdvancedStats) => row.defensiveLineYards,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensiveLineYards - b.defensiveLineYards;
     },
@@ -180,6 +201,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveSecondLevelYards.name,
     selector: (row: TeamAdvancedStats) => row.defensiveSecondLevelYards,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensiveSecondLevelYards - b.defensiveSecondLevelYards;
     },
@@ -188,6 +210,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveOpenFieldYards.name,
     selector: (row: TeamAdvancedStats) => row.defensiveOpenFieldYards,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensiveOpenFieldYards - b.defensiveOpenFieldYards;
     },
@@ -196,6 +219,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensivePointsPerOpportunity.name,
     selector: (row: TeamAdvancedStats) => row.defensivePointsPerOpportunity,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensivePointsPerOpportunity - b.defensivePointsPerOpportunity;
     },
@@ -204,6 +228,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveHavoc.name,
     selector: (row: TeamAdvancedStats) => row.defensiveHavoc,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return b.defensiveHavoc - a.defensiveHavoc;
     },
@@ -212,6 +237,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveRushingPPA.name,
     selector: (row: TeamAdvancedStats) => row.defensiveRushingPPA,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensiveRushingPPA - b.defensiveRushingPPA;
     },
@@ -220,6 +246,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveRushingSuccessRate.name,
     selector: (row: TeamAdvancedStats) => row.defensiveRushingSuccessRate,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensiveRushingSuccessRate - b.defensiveRushingSuccessRate;
     },
@@ -228,6 +255,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensiveRushingExplosiveness.name,
     selector: (row: TeamAdvancedStats) => row.defensiveRushingExplosiveness,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensiveRushingExplosiveness - b.defensiveRushingExplosiveness;
     },
@@ -236,6 +264,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensivePassingPPA.name,
     selector: (row: TeamAdvancedStats) => row.defensivePassingPPA,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensivePassingPPA - b.defensivePassingPPA;
     },
@@ -244,6 +273,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensivePassingSuccessRate.name,
     selector: (row: TeamAdvancedStats) => row.defensivePassingSuccessRate,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensivePassingSuccessRate - b.defensivePassingSuccessRate;
     },
@@ -252,6 +282,7 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
     name: statMap.defensivePassingExplosiveness.name,
     selector: (row: TeamAdvancedStats) => row.defensivePassingExplosiveness,
     sortable: true,
+    reorder: true,
     sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
       return a.defensivePassingExplosiveness - b.defensivePassingExplosiveness;
     },
