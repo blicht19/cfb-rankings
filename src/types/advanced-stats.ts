@@ -1,0 +1,36 @@
+export interface TeamAdvancedStats {
+  id: string;
+  teamName: string;
+  offensivePPA: number;
+  offensiveSuccessRate: number;
+  offensiveExplosiveness: number;
+  offensivePowerSuccess: number;
+  offensiveStuffRate: number;
+  offensiveLineYards: number;
+  offensiveSecondLevelYards: number;
+  offensiveOpenFieldYards: number;
+  offensivePointsPerOpportunity: number;
+  offensiveHavoc: number;
+  offensiveRushingPPA: number;
+  offensiveRushingSuccessRate: number;
+  offensiveRushingExplosiveness: number;
+  offensivePassingPPA: number;
+  offensivePassingSuccessRate: number;
+  offensivePassingExplosiveness: number;
+  defensivePPA: number;
+  defensiveSuccessRate: number;
+  defensiveExplosiveness: number;
+  defensivePowerSuccess: number;
+  defensiveStuffRate: number;
+  defensiveLineYards: number;
+  defensiveSecondLevelYards: number;
+  defensiveOpenFieldYards: number;
+  defensivePointsPerOpportunity: number;
+  defensiveHavoc: number;
+  defensiveRushingPPA: number;
+  defensiveRushingSuccessRate: number;
+  defensiveRushingExplosiveness: number;
+  defensivePassingPPA: number;
+  defensivePassingSuccessRate: number;
+  defensivePassingExplosiveness: number;
+}
