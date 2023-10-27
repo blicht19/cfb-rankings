@@ -287,4 +287,13 @@ export const columns: TableColumn<TeamAdvancedStats>[] = [
       return a.defensivePassingExplosiveness - b.defensivePassingExplosiveness;
     },
   },
+  {
+    name: 'Power Ranking Score',
+    selector: (row: TeamAdvancedStats) => row.powerRankingScore ?? 0,
+    sortable: true,
+    reorder: true,
+    sortFunction: (a: TeamAdvancedStats, b: TeamAdvancedStats) => {
+      return b.powerRankingScore! - a.powerRankingScore!;
+    },
+  },
 ];

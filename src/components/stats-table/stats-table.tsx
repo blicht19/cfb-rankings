@@ -4,6 +4,13 @@ import { columns } from './columns';
 
 export const StatsTable = (props: StatsTableProps): React.JSX.Element => {
   return (
-    <DataTable columns={columns} data={props.rows} title={props.title} pagination responsive />
+    <DataTable
+      progressPending={props.isLoading}
+      columns={columns}
+      data={props.rows}
+      title={props.title}
+      pagination
+      responsive
+    />
   );
 };

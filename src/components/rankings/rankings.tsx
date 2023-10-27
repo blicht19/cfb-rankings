@@ -8,9 +8,9 @@ import { statMap } from '../../utils';
 const statKeys = Object.keys(statMap);
 
 export const Rankings = (): React.JSX.Element => {
-  console.log(statKeys);
   const { isLoading, data } = useAdvancedStats(true);
   const [statWeightsMap, setStatWeightsMap] = useState(new Map<string, StatWeight>());
+
   useEffect(() => {
     const weightsMap = new Map<string, StatWeight>();
     statKeys.forEach((statKey) => {
@@ -22,9 +22,9 @@ export const Rankings = (): React.JSX.Element => {
   return (
     <>
       {statKeys.map((statKey) => {
-        console.log(statKey);
         return (
           <RankingGenerationInput
+            key={statKey}
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             title={statMap[statKey].name}
@@ -53,8 +53,9 @@ export const Rankings = (): React.JSX.Element => {
           />
         );
       })}
+      <button disabled={isLoading}>Generate Power Rankings</button>
       {isLoading && 'Loading...'}
-      {!isLoading && <StatsTable title="Team Stats" rows={data} />}
+      {!isLoading && <StatsTable isLoading={isLoading} title="Team Stats" rows={data} />}
     </>
   );
 };

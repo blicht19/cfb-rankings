@@ -33,4 +33,5 @@ export interface TeamAdvancedStats {
   defensivePassingPPA: number;
   defensivePassingSuccessRate: number;
   defensivePassingExplosiveness: number;
+  powerRankingScore?: number;
 }
