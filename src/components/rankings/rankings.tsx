@@ -29,9 +29,9 @@ export const Rankings = (): React.JSX.Element => {
   const calculate = useCallback(
     (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       e.preventDefault();
-      setStats(calculatePowerRankings(data));
+      setStats(calculatePowerRankings(data, statWeightsMap));
     },
-    [data],
+    [data, statWeightsMap],
   );
 
   return (
