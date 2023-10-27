@@ -1,15 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useAdvancedStats } from '../../hooks';
 import { RankingGenerationInput } from '../ranking-generation-input';
 import { StatsTable } from '../stats-table';
-import { StatWeight } from '../../types';
-import { statMap } from '../../utils';
+import { StatWeight, TeamAdvancedStats } from '../../types';
+import { calculatePowerRankings, statMap } from '../../utils';
 
 const statKeys = Object.keys(statMap);
 
 export const Rankings = (): React.JSX.Element => {
   const { isLoading, data } = useAdvancedStats(true);
   const [statWeightsMap, setStatWeightsMap] = useState(new Map<string, StatWeight>());
+  const [stats, setStats] = useState<TeamAdvancedStats[]>([]);
 
   useEffect(() => {
     const weightsMap = new Map<string, StatWeight>();
@@ -18,6 +19,20 @@ export const Rankings = (): React.JSX.Element => {
     });
     setStatWeightsMap(weightsMap);
   }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
+      setStats(structuredClone(data));
+    }
+  }, [data, isLoading]);
+
+  const calculate = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      e.preventDefault();
+      setStats(calculatePowerRankings(data));
+    },
+    [data],
+  );
 
   return (
     <>
@@ -53,8 +68,10 @@ export const Rankings = (): React.JSX.Element => {
           />
         );
       })}
-      <button disabled={isLoading}>Generate Power Rankings</button>
-      <StatsTable isLoading={isLoading} title="Team Stats" rows={data} />
+      <button onClick={calculate} disabled={isLoading}>
+        Generate Power Rankings
+      </button>
+      <StatsTable isLoading={isLoading || stats.length === 0} title="Team Stats" rows={stats} />
     </>
   );
 };
