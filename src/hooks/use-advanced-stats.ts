@@ -14,7 +14,7 @@ export const useAdvancedStats = (
   const key = 'stats' + excludeGarbage ? '-no-garbage' : '';
   const queryClient = useQueryClient();
   const { isLoading, isError, data, error } = useQuery(
-    'stats',
+    [key],
     async () => {
       const response = await axios.get(
         'http://localhost:3000/api/advanced-stats?excludeGarbageTime=true',

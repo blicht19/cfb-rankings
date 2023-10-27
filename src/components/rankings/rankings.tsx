@@ -54,8 +54,7 @@ export const Rankings = (): React.JSX.Element => {
         );
       })}
       <button disabled={isLoading}>Generate Power Rankings</button>
-      {isLoading && 'Loading...'}
-      {!isLoading && <StatsTable isLoading={isLoading} title="Team Stats" rows={data} />}
+      <StatsTable isLoading={isLoading} title="Team Stats" rows={data} />
     </>
   );
 };
