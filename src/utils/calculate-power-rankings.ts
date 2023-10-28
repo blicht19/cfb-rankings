@@ -15,9 +15,10 @@ export const calculatePowerRankings = (
   }
   const selectedStatsKeys = Array.from(statsArrays.keys());
   statsCopy.map((team) => {
+    const selectedTeam = team as unknown as Record<string, number>;
     let score = 0;
     for (const key of selectedStatsKeys) {
-      let statScore = percentileRank(statsArrays.get(key)!, team[key]);
+      let statScore = percentileRank(statsArrays.get(key)!, selectedTeam[key]);
       statScore *= weightMap.get(key)?.weight ?? 1;
       if (!statMap[key].positive) {
         statScore *= -1;
@@ -32,7 +33,8 @@ export const calculatePowerRankings = (
 const getSortedStatArray = (stats: TeamAdvancedStats[], key: string): number[] => {
   const valueArray: number[] = [];
   stats.map((team) => {
-    valueArray.push(team[key]);
+    const selectedTeam = team as unknown as Record<string, number>;
+    valueArray.push(selectedTeam[key]);
   });
   valueArray.sort((a, b) => {
     return a - b;

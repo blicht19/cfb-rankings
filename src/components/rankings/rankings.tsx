@@ -40,8 +40,6 @@ export const Rankings = (): React.JSX.Element => {
         return (
           <RankingGenerationInput
             key={statKey}
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
             title={statMap[statKey].name}
             checked={statWeightsMap?.get(statKey)?.selected ?? false}
             weight={statWeightsMap.get(statKey)?.weight ?? 1}

@@ -1,4 +1,6 @@
-export const statMap = {
+import { StatDetails } from '../types';
+
+export const statMap: Record<string, StatDetails> = {
   offensivePPA: {
     name: 'PPA',
     positive: true,
@@ -113,7 +115,7 @@ export const statMap = {
   },
   defensivePassingPPA: {
     name: 'Passing PPA Allowed',
-    postive: false,
+    positive: false,
   },
   defensivePassingSuccessRate: {
     name: 'Passing Success Rate Allowed',
