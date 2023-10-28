@@ -17,7 +17,9 @@ export const useAdvancedStats = (
     [key],
     async () => {
       const response = await axios.get(
-        'http://localhost:3000/api/advanced-stats?excludeGarbageTime=true',
+        `http://localhost:3000/api/advanced-stats?excludeGarbageTime=${
+          excludeGarbage ? 'true' : 'false'
+        }`,
       );
       return response.data;
     },
@@ -26,7 +28,7 @@ export const useAdvancedStats = (
       refetchOnMount: false,
       refetchOnReconnect: false,
       retry: false,
-      staleTime: 1000 * 60 * 60 * 24, // 24 hours
+      staleTime: Infinity,
     },
   );
 
