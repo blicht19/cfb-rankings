@@ -1,6 +1,7 @@
 import axios from 'axios';
-import { useQuery, useQueryClient } from 'react-query';
+import { useQuery } from 'react-query';
 import { TeamAdvancedStats } from '../types';
+import { queryClient } from '../utils';
 
 export const useAdvancedStats = (
   excludeGarbage: boolean,
@@ -12,7 +13,6 @@ export const useAdvancedStats = (
   invalidate: () => void;
 } => {
   const key = 'stats' + excludeGarbage ? '-no-garbage' : '';
-  const queryClient = useQueryClient();
   const { isLoading, isError, data, error } = useQuery(
     [key],
     async () => {
