@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import { TeamAdvancedStats } from '../types';
-import { queryClient } from '../utils';
 
 export const useAdvancedStats = (
   excludeGarbage: boolean,
@@ -10,7 +9,7 @@ export const useAdvancedStats = (
   isError: boolean;
   data: TeamAdvancedStats[];
   error: unknown;
-  invalidate: () => void;
+  key: string;
 } => {
   const key = 'stats' + excludeGarbage ? '-no-garbage' : '';
   const { isLoading, isError, data, error } = useQuery(
@@ -32,9 +31,5 @@ export const useAdvancedStats = (
     },
   );
 
-  const invalidate = () => {
-    queryClient.invalidateQueries(key);
-  };
-
-  return { isLoading, isError, data, error, invalidate };
+  return { isLoading, isError, data, error, key };
 };
