@@ -62,7 +62,7 @@ export const statMap: Record<string, StatDetails> = {
     positive: true,
   },
   defensivePPA: {
-    name: 'PPA Allowd',
+    name: 'PPA Allowed',
     positive: false,
   },
   defensiveSuccessRate: {
@@ -86,7 +86,7 @@ export const statMap: Record<string, StatDetails> = {
     positive: false,
   },
   defensiveSecondLevelYards: {
-    name: 'Second Level Yards Allowd',
+    name: 'Second Level Yards Allowed',
     positive: false,
   },
   defensiveOpenFieldYards: {

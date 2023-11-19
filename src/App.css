@@ -34,6 +34,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.main-heading {
-  padding: 16px
+.instructions {
+  max-width: 1700px;
+  text-align: left;
 }
