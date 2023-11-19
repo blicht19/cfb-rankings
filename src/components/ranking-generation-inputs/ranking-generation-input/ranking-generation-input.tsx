@@ -25,6 +25,7 @@ export const RankingGenerationInput = (props: RankingGenerationInputProps): Reac
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             props.onSliderChange(Number(e.target.value));
           }}
+          className={classes.slider}
         />
       </div>
     </div>
