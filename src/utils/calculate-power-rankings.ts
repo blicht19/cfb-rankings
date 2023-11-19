@@ -42,6 +42,10 @@ const getSortedStatArray = (stats: TeamAdvancedStats[], key: string): number[] =
   return valueArray;
 };
 
+/** Adapted from https://gist.github.com/IceCreamYou/6ffa1b18c4c8f6aeaad2
+ * Credit to Isaac Sukin https://gist.github.com/IceCreamYou
+ */
+
 const percentileRank = (arr: number[], v: number): number => {
   for (let i = 0, l = arr.length; i < l; i++) {
     if (v <= arr[i]) {

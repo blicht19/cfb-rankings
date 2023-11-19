@@ -1,15 +1,21 @@
 import { type RankingGenerationInputProps } from './ranking-generation-input.types';
+import classes from './ranking-generation-input.module.css';
 
 export const RankingGenerationInput = (props: RankingGenerationInputProps): React.JSX.Element => {
   return (
-    <div>
+    <div className={classes['ranking-input']}>
       <h3>{props.title}</h3>
-      <div>
-        <p>Include</p>
-        <input type="checkbox" checked={props.checked} onChange={props.onCheckedChange} />
+      <div className={classes.include}>
+        <p>Include?</p>
+        <input
+          type="checkbox"
+          checked={props.checked}
+          onChange={props.onCheckedChange}
+          className={classes['styled-checkbox']}
+        />
       </div>
       <div>
-        <p>Weight</p>
+        <p>Weight: {props.checked && props.weight}</p>
         <input
           type="range"
           min="1"
