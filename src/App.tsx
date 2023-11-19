@@ -12,13 +12,13 @@ function App() {
         team's percentile score in each selected state multiplied by the weight. Stats that would be
         considered negative (e.g. "Passing Success Rate Allowed") are multiplied by -1. Click the
         heading of the "Power Ranking Score" column to sort by your generated power ranking scores.
-        See the
+        See the{' '}
         {
           <a href="https://collegefootballdata.com/glossary" target="_blank">
             College Football Data Glossary
           </a>
-        }
-        for explanations of the stats.
+        }{' '}
+        for explanations of the stats. Note that the stats exclude garbage time.
       </p>
       <Rankings />
     </>

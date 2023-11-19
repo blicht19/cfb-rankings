@@ -1,27 +1,41 @@
-# React + TypeScript + Vite
+# CFB Rankings Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rank college football teams based on advanced stats from the College Football Data API.
 
-Currently, two official plugins are available:
+## Built With
+[![Vite][Vite]][Vite-url]  
+[![React][React.js]][React-url]  
+[![TypeScript][TypeScript]][Typescript-url]  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+### Prerequisites
+* node v18.18.0
+* npm v9.8.1
 
-## Expanding the ESLint configuration
+### Installation
+* Clone the repo `git clone https://github.com/blicht19/cfb-rankings.git`
+* Start the backend. See [here](https://github.com/blicht19/cfb-rankings-backend) for instructions.
+* Install depedencies `npm i`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Usage
+* Run in dev mode with `npm start`
+* Preview the production build by running `npm run build` and `npm run preview`
 
-- Configure the top-level `parserOptions` property like this:
+## Acknowledgements
+### Additional libraries used
+* [React Data Table](https://react-data-table-component.netlify.app/?path=/story/getting-started-intro--page)
+* [Tanstack Query](https://tanstack.com/query/v3/)
+* [Axios](https://axios-http.com/docs/intro)
+### Other Acknowledgements
+* Checkbox styling adapted from https://moderncss.dev/pure-css-custom-checkbox-style/
+* Slider styling adapted from https://www.w3schools.com/howto/howto_js_rangeslider.asp
+* Percentile score utility from https://gist.github.com/IceCreamYou/6ffa1b18c4c8f6aeaad2
+* Icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=15431)
+* Stats from the [College Football Data API](https://api.collegefootballdata.com/api/docs/?url=/api-docs.json)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[TypeScript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square
+[TypeScript-url]: [https://www.typescriptlang.org/]
+[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
