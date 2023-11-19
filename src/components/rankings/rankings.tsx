@@ -8,7 +8,7 @@ import { queryClient, statMap } from '../../utils';
 const statKeys = Object.keys(statMap);
 
 export const Rankings = (): React.JSX.Element => {
-  const { isLoading, data, key } = useAdvancedStats(true);
+  const { isLoading, data, key, isError } = useAdvancedStats(true);
 
   const onCalculate = useCallback(
     (newStats: TeamAdvancedStats[]) => {
@@ -25,7 +25,11 @@ export const Rankings = (): React.JSX.Element => {
         disabled={isLoading}
         onCalculate={onCalculate}
       />
-      <StatsTable isLoading={isLoading} title="Team Stats" rows={data} />
+      {isError ? (
+        <p>Failed to fetch stats</p>
+      ) : (
+        <StatsTable isLoading={isLoading} title="Team Stats" rows={data} />
+      )}
     </>
   );
 };
