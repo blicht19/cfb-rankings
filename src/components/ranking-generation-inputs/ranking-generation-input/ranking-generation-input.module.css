@@ -75,4 +75,5 @@
 .slider:disabled::-webkit-slider-thumb,
 .slider:disabled::-moz-range-thumb {
   background: gray;
+  cursor: not-allowed;
 }

@@ -4,3 +4,15 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.button {
+  background-color: #d3d3d3;
+}
+
+.button:hover {
+  border-color: red;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}

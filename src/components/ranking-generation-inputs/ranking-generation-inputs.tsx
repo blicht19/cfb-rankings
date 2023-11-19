@@ -54,7 +54,7 @@ export const RankingGenerationInputs = (props: RankingGenerationInputsProps): Re
           );
         })}
       </div>
-      <button onClick={calculate} disabled={props.disabled}>
+      <button onClick={calculate} disabled={props.disabled} className={classes.button}>
         Generate Power Rankings
       </button>
     </>
